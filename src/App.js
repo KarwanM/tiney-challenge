@@ -1,5 +1,4 @@
 import {
-  BrowserRouter,
   BrowserRouter as Router,
   Routes,
   Route,
@@ -8,7 +7,6 @@ import {
 import Header from "./components/Header";
 import DailyLog from "./components/DailyLog";
 import History from "./components/History";
-import Register from "./components/Register";
 
 const App = () => {
   return (
@@ -16,8 +14,8 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<DailyLog />} />
-          <Route path="/" element={<History />} />
+          <Route path="tiney-challenge/" element={<DailyLog />} />
+          <Route path="tiney-challenge/history" element={<History />} />
         </Routes>
       </Router>
     </div>

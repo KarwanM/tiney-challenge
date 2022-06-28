@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
  const Header = () => {
   return (
     <div>
-      <Link to="/dailylog">DailyLog</Link>
-      <Link to="/dailylog">History</Link>
+      <Link to="tiney-challenge/">DailyLog</Link>
+      <Link to="tiney-challenge/history">History</Link>
     </div>
   )
 }
