@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 
- const DailyLog = () => {
+const DailyLog = () => {
+
   return (
-    <div>DailyLog</div>
-  )
-}
+    <div className="dayli-log">
+    </div>
+  );
+};
 
-
-export default DailyLog
+export default DailyLog;

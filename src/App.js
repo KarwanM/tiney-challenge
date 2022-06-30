@@ -10,7 +10,7 @@ import History from "./components/History";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="main-container">
       <Router>
         <Header />
         <Routes>

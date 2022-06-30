@@ -1,0 +1,22 @@
+@use 'variables';
+
+header{
+    display: flex;
+    justify-content: space-around;
+}
+
+header a{
+    text-align: center;
+    width: 100%;
+    padding: 16px;
+    border-bottom: 3px solid variables.$light-primary-color;
+
+}
+
+.inactive{
+    border-color: variables.$light-primary-color;
+}
+
+.active{
+    border-color: variables.$primary-color;
+}
