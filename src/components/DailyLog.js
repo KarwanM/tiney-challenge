@@ -9,11 +9,28 @@ const DailyLog = () => {
   }, []);
 
   return (
-    <div className="dayli-log">
+    <div className="daily-log">
+      <p>You have {children.length} children expected in today</p>
       <ul>
-        {children ? <p>{children.map((child) => {
-          return <li key={child.id}>{child.firstName}</li>
-        })}</p> : <p>Loadding...</p>}
+        {children ? (
+          <div>
+            {children.map((child) => {
+              return (
+                <li key={child.id}>
+                  <img src={child.src} />
+                  <div className="name">
+                    <p>{child.firstName}</p>
+                    <span>Signed out</span>
+                  </div>
+
+                  <button>Sign in</button>
+                </li>
+              );
+            })}
+          </div>
+        ) : (
+          <p>Loadding...</p>
+        )}
       </ul>
     </div>
   );

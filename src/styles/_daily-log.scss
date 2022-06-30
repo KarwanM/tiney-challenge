@@ -1,0 +1,48 @@
+@use 'variables';
+
+
+.daily-log> p{
+    padding: 20px ;
+    border-bottom: 1px solid variables.$light-primary-color;
+}
+
+.daily-log li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid variables.$light-primary-color;
+}
+
+.name{
+    width: 40%;
+}
+
+.name span{
+    font-size: 14px;
+    color: variables.$light-primary-color;
+}
+
+.daily-log li img{
+    width: 50px;
+    height: 50px;
+    border: 1.5px solid variables.$primary-color;
+    border-radius: 50%;
+}
+
+.daily-log li button{
+    height: 30px;
+    padding: 0 12px;
+    background-color: variables.$primary-bg-color;
+    border: 2px solid variables.$button-bg-color;
+    color: variables.$button-bg-color;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.daily-log li button:hover{
+    background-color: variables.$button-bg-color;
+    border: 2px solid variables.$primary-bg-color;
+    color: variables.$primary-bg-color;
+    border-radius: 5px;
+}

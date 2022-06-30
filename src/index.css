@@ -23,11 +23,16 @@ button,
 footer {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   color: #474775;
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .main-container {
@@ -51,15 +56,61 @@ header a {
   text-align: center;
   width: 100%;
   padding: 16px;
-  border-bottom: 3px solid #d6d6e8;
+  border-bottom: 3px solid #c5c5e1;
 }
 
 .inactive {
-  border-color: #d6d6e8;
+  border-color: #c5c5e1;
 }
 
 .active {
   border-color: #474775;
+}
+
+.daily-log > p {
+  padding: 20px;
+  border-bottom: 1px solid #c5c5e1;
+}
+
+.daily-log li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #c5c5e1;
+}
+
+.name {
+  width: 40%;
+}
+
+.name span {
+  font-size: 14px;
+  color: #c5c5e1;
+}
+
+.daily-log li img {
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid #474775;
+  border-radius: 50%;
+}
+
+.daily-log li button {
+  height: 30px;
+  padding: 0 12px;
+  background-color: white;
+  border: 2px solid #f17a8b;
+  color: #f17a8b;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.daily-log li button:hover {
+  background-color: #f17a8b;
+  border: 2px solid white;
+  color: white;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=index.css.map */
