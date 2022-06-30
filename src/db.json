@@ -2,63 +2,297 @@
   "children": [
     {
       "id": 1,
-      "firstName": "Isabella",
+      "name": "Isabella",
       "age": 3,
-      "signedIn": false,
+      "signIn": false,
       "src": "https://cdn.cdnparenting.com/articles/2020/05/30182235/97285895.webp",
       "regiter": true,
-      "hour": 21,
-      "minute": 26
+      "hour": 23,
+      "minute": 29,
+      "signedIn": [
+        {
+          "minute": 45,
+          "hour": 22,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ],
+      "signedOut": [
+        {
+          "minute": 45,
+          "hour": 22,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ]
     },
     {
       "id": 2,
-      "firstName": "Damien",
+      "name": "Damien",
       "age": 2,
-      "signedIn": false,
+      "signIn": false,
       "src": "https://media.istockphoto.com/photos/beautiful-happy-boy-with-painted-hands-picture-id1207261035?k=20&m=1207261035&s=612x612&w=0&h=aEzfrUNuXjGHGhLa0Eet4yGHzsFu3BGsD1W8xu_2UJM=",
       "regiter": true,
-      "hour": 21,
-      "minute": 26
+      "hour": 23,
+      "minute": 29,
+      "signedIn": [
+        {
+          "minute": null,
+          "hour": null,
+          "day": null,
+          "month": null,
+          "year": null
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ],
+      "signedOut": [
+        {
+          "minute": null,
+          "hour": null,
+          "day": null,
+          "month": null,
+          "year": null
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ]
     },
     {
       "id": 3,
-      "firstName": "Samuel",
+      "name": "Samuel",
       "age": 2,
-      "signedIn": false,
+      "signIn": false,
       "src": "https://media.istockphoto.com/photos/babies-make-the-world-a-cuter-place-picture-id519649726?k=20&m=519649726&s=612x612&w=0&h=J-DRmvKgm6bOBLh7uVO3ZhroMCXLSpwCyRCW36ulSj0=",
       "regiter": true,
-      "hour": 21,
-      "minute": 26
+      "hour": 23,
+      "minute": 29,
+      "signedIn": [
+        {
+          "minute": null,
+          "hour": null,
+          "day": null,
+          "month": null,
+          "year": null
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ],
+      "signedOut": [
+        {
+          "minute": null,
+          "hour": null,
+          "day": null,
+          "month": null,
+          "year": null
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ]
     },
     {
       "id": 4,
-      "firstName": "Alice",
+      "name": "Alice",
       "age": 3,
-      "signedIn": false,
+      "signIn": false,
       "src": "https://i.pinimg.com/originals/ab/38/f7/ab38f75812bd05f0c01837ba6958784d.jpg",
       "regiter": true,
-      "hour": 21,
-      "minute": 26
+      "hour": 23,
+      "minute": 29,
+      "signedIn": [
+        {
+          "minute": null,
+          "hour": null,
+          "day": null,
+          "month": null,
+          "year": null
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ],
+      "signedOut": [
+        {
+          "minute": null,
+          "hour": null,
+          "day": null,
+          "month": null,
+          "year": null
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ]
     },
     {
       "id": 5,
-      "firstName": "Maurice",
+      "name": "Maurice",
       "age": 4,
-      "signedIn": false,
+      "signIn": false,
       "src": "https://2rdnmg1qbg403gumla1v9i2h-wpengine.netdna-ssl.com/wp-content/uploads/sites/3/2021/04/babySleepTraining-1222732527-770x533-1-650x428.jpg",
       "regiter": true,
-      "hour": 21,
-      "minute": 26
+      "hour": 23,
+      "minute": 29,
+      "signedIn": [
+        {
+          "minute": null,
+          "hour": null,
+          "day": null,
+          "month": null,
+          "year": null
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ],
+      "signedOut": [
+        {
+          "minute": null,
+          "hour": null,
+          "day": null,
+          "month": null,
+          "year": null
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ]
     },
     {
       "id": 6,
-      "firstName": "Marguerite",
+      "name": "Marguerite",
       "age": 3,
-      "signedIn": false,
+      "signIn": false,
       "src": "https://cdn.cdnparenting.com/articles/2018/11/11133842/463272494-H.webp",
       "regiter": false,
-      "hour": 21,
-      "minute": 26
+      "hour": 23,
+      "minute": 29,
+      "signedIn": [
+        {
+          "minute": null,
+          "hour": null,
+          "day": null,
+          "month": null,
+          "year": null
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ],
+      "signedOut": [
+        {
+          "minute": null,
+          "hour": null,
+          "day": null,
+          "month": null,
+          "year": null
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        },
+        {
+          "minute": 29,
+          "hour": 23,
+          "day": 30,
+          "month": 5,
+          "year": 2022
+        }
+      ]
     }
   ]
 }

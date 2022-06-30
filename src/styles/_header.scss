@@ -1,11 +1,30 @@
 @use 'variables';
 
-header{
+
+.banner{
+    width: 100%;
+    padding:  20px 0;
+    display: flex;
+    background-color: variables.$light-primary-color;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.banner span {
+    text-align: center;
+    width: 80%;
+}
+
+.banner a{
+    padding-left: 5%;
+}
+
+nav{
     display: flex;
     justify-content: space-around;
 }
 
-header a{
+nav a{
     text-align: center;
     width: 100%;
     padding: 16px;

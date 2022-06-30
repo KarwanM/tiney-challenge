@@ -7,7 +7,7 @@ const DailyLog = () => {
   const newDate = new Date();
 
   useEffect(() => {
-    setChildren(Data.children);
+    // setChildren(Data.children);
 
     try {
       fetch("http://localhost:4000/children")
@@ -25,28 +25,54 @@ const DailyLog = () => {
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    fetch("http://localhost:4000/children/" + e.target.value, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: e.target.value,
-        signedIn: true,
-        hour: newDate.getHours(),
-        minute: newDate.getMinutes(),
-      }),
-    });
+
+    try {
+      fetch("http://localhost:4000/children/" + e.target.value, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: e.target.value,
+          signIn: true,
+          hour: newDate.getHours(),
+          minute: newDate.getMinutes(),
+          signedIn: [...children[e.target.value - 1].signedIn, {
+              minute: newDate.getMinutes(),
+              hour: newDate.getHours(),
+              day: newDate.getDate(),
+              month: newDate.getMonth(),
+              year: newDate.getFullYear(),
+            },
+          ],
+        }),
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const handleSignOut = (e) => {
     e.preventDefault();
-    fetch("http://localhost:4000/children/" + e.target.value, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        id: e.target.value,
-        signedIn: false,
-      }),
-    });
+
+    try {
+      fetch("http://localhost:4000/children/" + e.target.value, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: e.target.value,
+          signIn: false,
+          signedOut: [...children[e.target.value - 1].signedIn, {
+            minute: newDate.getMinutes(),
+            hour: newDate.getHours(),
+            day: newDate.getDate(),
+            month: newDate.getMonth(),
+            year: newDate.getFullYear(),
+          },
+        ],
+        }),
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -60,23 +86,35 @@ const DailyLog = () => {
                 <li key={child.id}>
                   <img src={child.src} />
                   <div className="name">
-                    <p>{child.firstName}</p>
-                    {child.signedIn ? (
+                    <p>{child.name}</p>
+                    {child.signIn ? (
                       child.hour.length > 2 ? (
-                        <span>Signed in at 0{child.hour}:{child.minute}</span>
+                        <span>
+                          Signed in at 0{child.hour}:{child.minute}
+                        </span>
                       ) : (
-                        <span>Signed in at {child.hour}:{child.minute}</span>
+                        <span>
+                          Signed in at {child.hour}:{child.minute}
+                        </span>
                       )
                     ) : (
                       <span>Signed out</span>
                     )}
                   </div>
-                  {child.signedIn ? (
-                    <button value={child.id} className="signed-in" onClick={handleSignOut}>
+                  {child.signIn ? (
+                    <button
+                      value={child.id}
+                      className="signed-in"
+                      onClick={handleSignOut}
+                    >
                       Sign out
                     </button>
                   ) : (
-                    <button value={child.id} className="signed-out" onClick={handleSignIn}>
+                    <button
+                      value={child.id}
+                      className="signed-out"
+                      onClick={handleSignIn}
+                    >
                       Sign in
                     </button>
                   )}

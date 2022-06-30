@@ -47,12 +47,30 @@ ul {
   clear: both;
 }
 
-header {
+.banner {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  background-color: #c5c5e1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.banner span {
+  text-align: center;
+  width: 80%;
+}
+
+.banner a {
+  padding-left: 5%;
+}
+
+nav {
   display: flex;
   justify-content: space-around;
 }
 
-header a {
+nav a {
   text-align: center;
   width: 100%;
   padding: 16px;
@@ -113,6 +131,50 @@ header a {
   background-color: #f17a8b;
   border: 2px solid white;
   color: white;
+}
+
+.history li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #c5c5e1;
+}
+
+.history .name {
+  width: 40%;
+}
+
+.history .name span {
+  font-size: 14px;
+  color: #c5c5e1;
+}
+
+.history li img {
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid #474775;
+  border-radius: 50%;
+}
+
+.history li button {
+  width: 75px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register form {
+  width: 70%;
+  margin: 5vw auto;
+}
+
+.register form * {
+  width: 100%;
+}
+
+.register form input {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=index.css.map */
