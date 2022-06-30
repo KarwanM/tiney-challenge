@@ -31,18 +31,32 @@
 }
 
 .daily-log li button{
+    width: 75px;
     height: 30px;
-    padding: 0 12px;
-    background-color: variables.$primary-bg-color;
-    border: 2px solid variables.$button-bg-color;
-    color: variables.$button-bg-color;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.daily-log li button:hover{
+.signed-in{
+    background-color: variables.$primary-bg-color;
+    border: 2px solid variables.$button-bg-color;
+    color: variables.$button-bg-color;
+}
+
+.signed-out{
     background-color: variables.$button-bg-color;
     border: 2px solid variables.$primary-bg-color;
     color: variables.$primary-bg-color;
-    border-radius: 5px;
 }
+
+// .signed-out:hover{
+//     background-color: variables.$primary-bg-color;
+//     border: 2px solid variables.$button-bg-color;
+//     color: variables.$button-bg-color;
+// }
+
+// .signed-in:hover{
+//     background-color: variables.$button-bg-color;
+//     border: 2px solid variables.$primary-bg-color;
+//     color: variables.$primary-bg-color;
+// }
