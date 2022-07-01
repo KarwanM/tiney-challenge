@@ -3,26 +3,11 @@ import React, { useState, useEffect } from "react";
 const Register = () => {
   const [children, setChildren] = useState([]);
 
-  //   useEffect(() => {
 
-  //     try {
-  //       fetch("http://localhost:4000/children")
-  //         .then((res) => res.json())
-  //         .then((data) => {
-  //           setChildren(data);
-  //         })
-  //         .catch((err) => {
-  //           console.log(err);
-  //         });
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   }, []);
 
   const handleRegister = (e) => {
     e.preventDefault();
 
-    // setChildren({ ...children,   });
     console.log(children);
     fetch("http://localhost:4000/children/", {
       method: "POST",
