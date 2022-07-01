@@ -23,6 +23,14 @@ const History = () => {
 
   return (
     <div className="history">
+      <div className="year">
+        <p>2022</p>
+        <span> 	&#128197;  &#8964;</span>
+      </div>
+      <div className="month">
+        <p>July</p>
+        <span>&#8964;</span>
+      </div>
       <ul>
         {children ? (
           <div>

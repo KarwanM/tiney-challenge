@@ -1,6 +1,17 @@
 @use 'variables';
 
 
+.year, .month{
+    display: flex;
+    justify-content: space-between;
+}
+
+.year , .month {
+    padding: 20px 50px;
+    border-bottom: 1.5px solid variables.$light-primary-color;
+    font-weight: bold;
+}
+
 .history li{
     display: flex;
     justify-content: space-around;

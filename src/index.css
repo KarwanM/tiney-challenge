@@ -133,6 +133,17 @@ nav a {
   color: white;
 }
 
+.year, .month {
+  display: flex;
+  justify-content: space-between;
+}
+
+.year, .month {
+  padding: 20px 50px;
+  border-bottom: 1.5px solid #c5c5e1;
+  font-weight: bold;
+}
+
 .history li {
   display: flex;
   justify-content: space-around;
