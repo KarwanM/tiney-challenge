@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import Data from "../db.json";
 
 const History = () => {
   const [children, setChildren] = useState([]);
 
   useEffect(() => {
-    // setChildren(Data.children);
+    setChildren(Data.children);
 
     try {
       fetch("http://localhost:4000/children")

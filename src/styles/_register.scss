@@ -1,3 +1,6 @@
+@use 'variables';
+
+
 .register form{
     width: 70%;
     margin: 5vw auto;
@@ -9,4 +12,26 @@
 
 .register form input{
     margin-bottom: 20px ;
+    padding: 5px ;
+    font-size: 16px;
+}
+
+.register button{
+    display: block;
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 120px;
+    background-color: variables.$primary-bg-color;
+    border: 1.5px solid  variables.$button-bg-color;
+    border-radius: 5px;
+    color: variables.$button-bg-color;
+    cursor: pointer;
+}
+
+.register button:hover{
+    border: 1.5px solid  ;
+    border-radius: 5px;
+    color: variables.$primary-bg-color;
+    border: 1.5px solid  variables.$primary-bg-color;
+    background-color: variables.$button-bg-color;
 }

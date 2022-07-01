@@ -7,7 +7,7 @@ const DailyLog = () => {
   const newDate = new Date();
 
   useEffect(() => {
-    // setChildren(Data.children);
+    setChildren(Data.children);
 
     try {
       fetch("http://localhost:4000/children")
