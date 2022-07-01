@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 const History = () => {
   const [children, setChildren] = useState([]);
 
-  const newDate = new Date();
-
   useEffect(() => {
     // setChildren(Data.children);
 
@@ -34,13 +32,26 @@ const History = () => {
                   <img src={child.src} />
                   <div className="name">
                     <p>{child.name}</p>
-
+                  {child.signedIn> 0?(
+                    <>
                     <span>
-                      in at {child.signedIn[child.signedIn.length -1].hour}:{child.signedIn[child.signedIn.length -1].minute}
-                    </span>
+                    in at {child.signedIn[child.signedIn.length -1].hour}:{child.signedIn[child.signedIn.length -1].minute}
+                  </span>
+                  <span>
+                    out at {child.signedOut[child.signedOut.length -1].hour}:{child.signedOut[child.signedOut.length -1].minute}
+                  </span>
+                  </>
+                  ):(
+                    <>
                     <span>
-                      out at {child.signedOut[child.signedOut.length -1].hour}:{child.signedOut[child.signedOut.length -1].minute}
-                    </span>
+                    in at {child.hour}:{child.minute}
+                  </span>
+                  <span>
+                    out at {child.hour}:{child.minute}
+                  </span>
+                  </>
+                  )}
+                    
                   </div>
                 </li>
               );

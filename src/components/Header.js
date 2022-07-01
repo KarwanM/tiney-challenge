@@ -11,7 +11,7 @@ const Header = () => {
       </div>
 
       <nav>
-        <Link to="tiney-challenge/" className="active">
+        <Link to="tiney-challenge/" >
           DailyLog
         </Link>
         <Link to="tiney-challenge/history">History</Link>

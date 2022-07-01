@@ -26,53 +26,105 @@ const DailyLog = () => {
   const handleSignIn = (e) => {
     e.preventDefault();
 
-    try {
-      fetch("http://localhost:4000/children/" + e.target.value, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          id: e.target.value,
-          signIn: true,
-          hour: newDate.getHours(),
-          minute: newDate.getMinutes(),
-          signedIn: [...children[e.target.value - 1].signedIn, {
+    if (children.signedIn) {
+      try {
+        fetch("http://localhost:4000/children/" + e.target.value, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: e.target.value,
+            signIn: true,
+            hour: newDate.getHours(),
+            minute: newDate.getMinutes(),
+            signedIn: [
+              ...children[e.target.value - 1].signedIn,
+              {
+                minute: newDate.getMinutes(),
+                hour: newDate.getHours(),
+                day: newDate.getDate(),
+                month: newDate.getMonth(),
+                year: newDate.getFullYear(),
+              },
+            ],
+          }),
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      try {
+        fetch("http://localhost:4000/children/" + e.target.value, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: e.target.value,
+            signIn: true,
+            hour: newDate.getHours(),
+            minute: newDate.getMinutes(),
+            signedIn: {
               minute: newDate.getMinutes(),
               hour: newDate.getHours(),
               day: newDate.getDate(),
               month: newDate.getMonth(),
               year: newDate.getFullYear(),
             },
-          ],
-        }),
-      });
-    } catch (err) {
-      console.log(err);
+          }),
+        });
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
 
   const handleSignOut = (e) => {
     e.preventDefault();
 
-    try {
-      fetch("http://localhost:4000/children/" + e.target.value, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          id: e.target.value,
-          signIn: false,
-          signedOut: [...children[e.target.value - 1].signedIn, {
-            minute: newDate.getMinutes(),
-            hour: newDate.getHours(),
-            day: newDate.getDate(),
-            month: newDate.getMonth(),
-            year: newDate.getFullYear(),
-          },
-        ],
-        }),
-      });
-    } catch (err) {
-      console.log(err);
+    if(children.signedOut){
+      try {
+        fetch("http://localhost:4000/children/" + e.target.value, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: e.target.value,
+            signIn: false,
+            signedOut: [
+              ...children[e.target.value].signedIn,
+              {
+                minute: newDate.getMinutes(),
+                hour: newDate.getHours(),
+                day: newDate.getDate(),
+                month: newDate.getMonth(),
+                year: newDate.getFullYear(),
+              },
+            ],
+          }),
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    }else{
+      try {
+        fetch("http://localhost:4000/children/" + e.target.value, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id: e.target.value,
+            signIn: false,
+            signedOut: 
+              {
+                minute: newDate.getMinutes(),
+                hour: newDate.getHours(),
+                day: newDate.getDate(),
+                month: newDate.getMonth(),
+                year: newDate.getFullYear(),
+              },
+          }),
+        });
+      } catch (err) {
+        console.log(err);
+      }
     }
+    
   };
 
   return (
