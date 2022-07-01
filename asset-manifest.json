@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/tiney-challenge/static/css/main.93668af4.css",
-    "main.js": "/tiney-challenge/static/js/main.0e553626.js",
+    "main.js": "/tiney-challenge/static/js/main.7af8d032.js",
     "index.html": "/tiney-challenge/index.html",
     "main.93668af4.css.map": "/tiney-challenge/static/css/main.93668af4.css.map",
-    "main.0e553626.js.map": "/tiney-challenge/static/js/main.0e553626.js.map"
+    "main.7af8d032.js.map": "/tiney-challenge/static/js/main.7af8d032.js.map"
   },
   "entrypoints": [
     "static/css/main.93668af4.css",
-    "static/js/main.0e553626.js"
+    "static/js/main.7af8d032.js"
   ]
 }
